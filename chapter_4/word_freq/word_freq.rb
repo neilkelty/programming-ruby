@@ -8,6 +8,4 @@ counts = count_frequency(word_list)
 sorted = counts.sort_by { |word, count| count }
 top_five = sorted.last(5)
 
-top_five.each do |word, count|
-  puts "#{word}: #{count}"
-end
+puts top_five.map { |word, count| "#{word}: #{count}" }
